@@ -19,7 +19,7 @@ def login(token):
     }
     head["Authorization"] = "Bearer " + token
     suiteid = 'SUITE1193'
-    baseUrl = 'http://10.10.10.170:9091'
+    baseUrl = 'http://10.10.10.170'
 
     run = s.get(baseUrl + ':8102/optimize/v1/suite/runSetting/run/' + suiteid, headers=head)
     runout = json.loads(run.content)
